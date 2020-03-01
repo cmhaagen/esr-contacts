@@ -16,13 +16,13 @@
         };
 
         function response(obj) { 
-            //var jsondata = obj.data;
+            var data = obj.data;
             //var contacts = gadgets.json.parse(obj.data);
             var html = "";
             
             html += '<pre>';
-            html += 'github';
-            //html += obj.text;
+            html += 'github ';
+            html += typeof data;
             html += '</pre>';
                          
             document.getElementById('contact-info').innerHTML = html;
