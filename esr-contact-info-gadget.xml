@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Module>
+  <ModulePrefs title="ESR Contact Info" /> 
+  <Content type="html">
+     <![CDATA[
+        <style type="text/css"> body { background: transparent; padding: 0; margin:0; } </style>
+        <div id="contact-info">Loading contact info...</div>
+        <script type="text/javascript">
+
+        function makeJSONRequest() {    
+            var params = {};
+            params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.JSON;
+            // This URL returns a JSON-encoded string that represents a JavaScript object
+            var url = "https://script.google.com/macros/s/AKfycbx50zruq_5OdMXbQ8A2X4FjkLydWcfJP-YAeIvP6A4j9M2L-Ldu/exec";
+            gadgets.io.makeRequest(url, response, params);
+        };
+
+        function response(obj) { 
+            //var jsondata = obj.data;
+            //var contacts = gadgets.json.parse(obj.data);
+            var html = "";
+            
+            html += '<pre>';
+            html += 'hello world';
+            html += obj.text;
+            html += '</pre>';
+                         
+            document.getElementById('contact-info').innerHTML = html;
+        };
+
+        makeJSONRequest();
+
+        </script>
+    ]]>
+  </Content> 
+</Module>
