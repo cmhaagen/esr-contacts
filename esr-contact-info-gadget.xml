@@ -21,7 +21,7 @@
             var html = "";
             
             html += '<pre>';
-            html += 'github;
+            html += 'github';
             //html += obj.text;
             html += '</pre>';
                          
