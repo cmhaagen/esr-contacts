@@ -21,8 +21,8 @@
             var html = "";
             
             html += '<pre>';
-            html += 'hello world';
-            html += obj.text;
+            html += 'github;
+            //html += obj.text;
             html += '</pre>';
                          
             document.getElementById('contact-info').innerHTML = html;
